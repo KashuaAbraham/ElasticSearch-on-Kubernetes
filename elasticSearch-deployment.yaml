@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: elasticsearch-deployment
+  name: elasticSearch-deployment
   labels:
-    app: elasticsearch
+    app: elasticSearch
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: elasticsearch
+      app: elasticSearch
   template:
     metadata:
       labels:
-        app: elasticsearch
+        app: elasticSearch
     spec:
       containers:
-      - name: elasticsearch
+      - name: elasticSearch
         image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
         resources:
           limits:
