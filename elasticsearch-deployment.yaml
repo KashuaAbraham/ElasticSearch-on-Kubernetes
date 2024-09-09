@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: elasticsearch-deployment  # Name must be lowercase
+  name: elasticsearch-deployment
   labels:
     app: elasticsearch
 spec:
@@ -15,7 +15,7 @@ spec:
         app: elasticsearch
     spec:
       containers:
-      - name: elasticsearch  # Name must be lowercase
+      - name: elasticsearch
         image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
         resources:
           limits:
@@ -28,4 +28,4 @@ spec:
         - containerPort: 9200
         env:
         - name: discovery.type
-          value:
+          value: "single-node"
