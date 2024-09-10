@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:8.6.3 # Adjust version if needed
+        image: docker.elastic.co/elasticsearch/elasticsearch:8.15.1 # Adjust version if needed
         env:
         - name: discovery.type
           value: single-node
